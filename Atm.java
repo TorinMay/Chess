@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Atm {
 	private Scanner lala = new Scanner();
 	private int[] array = new int[3];
-	private Account bob = new Account("bob,1234", 1234, 100);
+	private Account bob = new Account("bob", 1234, 100);
 	private Account alice = new Account("alice", 3333, 250);
 	private Account jt= new Account("JT", 0001, 999999999);
 
