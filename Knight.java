@@ -1,7 +1,7 @@
 public class Knight extends Piece{
 	private int x = 0;
 	private int y = 0
-	public Bishop(int i, int j){
+	public Knight(int i, int j){
 		x=i;
 		y=j;
 	}
