@@ -11,7 +11,7 @@ public class Grid {
 	public void set(Point g, Piece l){
 		arrayYo[g.getX()][g.getY()] = l;
 	}
-	public Peice get(Point k){
+	public Piece getPiece(Point k){
 		return arrayYo[k.getX()][k.getY()];
 	}
 
