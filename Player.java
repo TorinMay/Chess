@@ -1,8 +1,10 @@
 public class Player {
+
 	public Player(){
 
 	}
-	public enPasse(){
-		if()
+
+	public void enPasse(Pawn pawn){
+		if(pawn.getMoveCount == 1)
 	}
 }
