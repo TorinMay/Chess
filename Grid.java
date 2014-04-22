@@ -1,18 +1,21 @@
 import java.util.ArrayList;
 public class Grid {
-	private Piece[][] arrayYo = new int[8][8];
+	private Square[][] arrayYo = new Square[8][8];
+	private Square q = new Square();
+	private Point l;
+	private Graphics g = new Graphics();
 	public Grid(){
-		for (int a = 0;a<9: a++) {
+		for (int a = 0;a<9; a++) {
 			for (int b = 0; b<9; b++) {
-				arrayYo[a][b] = 0;
+				if(a%2 == 0){
+					arrayYo[a][b] = new Square("Black",l =new Point(a,b),g);
+				}
+				else{
+					arrayYo[a][b] = new Square("White",l =new Point(a,b),g);
+				}
 			}
 		}
 	}
-	public void set(Point g, Piece l){
-		arrayYo[g.getX()][g.getY()] = l;
-	}
-	public Peice get(Point k){
-		return arrayYo[k.getX()][k.getY()];
-	}
+	
 
 }

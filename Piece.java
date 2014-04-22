@@ -10,7 +10,7 @@ public class Piece{
 	}
 
 	public void move(Point p) {
-		if (grid.get() == null) {
+		if (grid.get(p) == null) {
 			location = p;
 		}
 	}
