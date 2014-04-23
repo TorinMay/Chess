@@ -6,7 +6,9 @@ public class Bishop extends Piece {
 		super("Bishop", k);
 	}
 	public void move(Point k){
-		if(Math.abs(super.k.getY()-y) == Math.abs(super.k.getX()-x) && super.k.getY() < 8 && super.k.getX() < 8){
+		int j = getLoc().getY();
+		int i = getLoc().getX();
+		if(Math.abs(k.getY()-j) == Math.abs(k.getX()-i) && k.getY() < 8 && k.getX() < 8){
 			grid.set(k, this);
 		}
 	}

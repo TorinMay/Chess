@@ -4,7 +4,7 @@ public class Square{
 	private Graphics g;
 	private Piece z;
 	public Square(String a, Point b, Peice k){
-		if(a.eqauls("Black")){
+		if(a.equals("Black")){
 			c = new Color(62, 0, 36);
 		}
 		else{

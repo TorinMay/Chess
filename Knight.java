@@ -5,11 +5,16 @@ public class Knight extends Piece{
 		super("Knight", k);
 	}
 	public void move(Point k){
-		if((super.k.getY()-j)/2 == super.k.getX()-i && k.getY() < 8 k.getX() < 8 && grid.get(k) == null){
-			//moves piece to loc
+		int j = getLoc().getY();
+		int i = getLoc().getX();
+		int lololo = k.getY();
+		int ololol = k.getX();
+
+		if((lololo-j)/2 == ololol-i && lololo < 8 && ololol < 8 && grid.get(k) == null){
+			grid.set(k, this);
 		}
-		else if(super.k.getY()-j == (super.k.getX()-i)/2 && k.getY() < 8 k.getX() < 8 && grid.get(k) == null){
-			//move piece to loc
+		else if(lololo-j) == (ololol-i)/2 && lololo && < 8 ololol < 8 && grid.get(k) == null){
+			grid.set(k, this);
 		}
 		else{
 
