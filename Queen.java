@@ -5,7 +5,7 @@ public class Queen extends Piece {
 
 	public void move(Point k) {
 		if (isMoveLegal(k)) {
-			grid.set(k,this);
+			getGrid().set(k,this);
 		}
 	}
 	public boolean isMoveLegal(Point k) {
