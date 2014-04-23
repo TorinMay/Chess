@@ -18,11 +18,11 @@ public class Pawn extends Piece{
 
 	public boolean isMoveLegal(){
 		if (color == "white") {
-			if (k.getX() == setLoc.getX() && k.getY() == getLoc() - 1 && k.getY > 0) {
+			if (k.getX() == setLoc.getX() && k.getY() == getY() - 1 && k.getY > 0) {
 				return true;
 			}
 		} else if (color == "black") {
-			if (k.getX() == setLoc.getX() && k.getY() == getLoc() + 1 && k.getY > 0) {
+			if (k.getX() == setLoc.getX() && k.getY() == getY() + 1 && k.getY > 0) {
 				return true;
 			}
 		}
@@ -31,11 +31,11 @@ public class Pawn extends Piece{
 	//method for a pawn's starting move, they can move forward two spaces
 	public void openingMove(Point k) {
 		if (color == "white") {
-			if (k.getX() == setLoc.getX() && k.getY() == getLoc() - 2 && k.getY > 0) {
+			if (k.getX() == setLoc.getX() && k.getY() == getY() - 2 && k.getY > 0) {
 				grid.set(k, this);
 			}
 		} else if (color == "black") {
-			if (k.getX() == setLoc.getX() && k.getY() == getLoc() + 2 && k.getY > 0) {
+			if (k.getX() == setLoc.getX() && k.getY() == getY() + 2 && k.getY > 0) {
 				grid.set(k, this);
 			}
 		}
