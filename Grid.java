@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 public class Grid {
 	private Square[][] arrayYo = new Square[8][8];
 	private Square q = new Square();

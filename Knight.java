@@ -13,11 +13,8 @@ public class Knight extends Piece{
 		if((lololo-j)/2 == ololol-i && lololo < 8 && ololol < 8 && grid.get(k) == null){
 			grid.set(k, this);
 		}
-		else if(lololo-j) == (ololol-i)/2 && lololo && < 8 ololol < 8 && grid.get(k) == null){
+		else if(lololo-j == (ololol-i)/2 && lololo < 8 && ololol < 8 && grid.get(k) == null){
 			grid.set(k, this);
-		}
-		else{
-
 		}
 	}
 }
