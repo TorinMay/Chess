@@ -3,7 +3,7 @@ public class Piece{
 	private String type;
 	private Point location;
 	private String color;
-	private Grid grid = new Grid();
+	public Grid grid = new Grid();
 
 	public Piece(String a, String color, Point x){
 		type = a;
