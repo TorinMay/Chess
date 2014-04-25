@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 public class Pawn extends Piece{
 
 	private int moveCount = 0;
 
-	public Pawn(Point p, Color color) {
+	public Pawn(Point p, String color) {
 		super("Pawn", color, p);
 	}
 
@@ -10,6 +12,28 @@ public class Pawn extends Piece{
 		if (isMoveLegal(k)) {
 			grid.set(k,this);
 		}
+	}
+
+	public ArrayList<Location> getMoves(BoardState board)
+	{
+		ArrayList<Location> possibleMoves = new ArrayList<Location>();
+		int y = getLoc().getY();
+		int x = getLoc().getX();
+		
+		Location whiteOne = new Point(y-1,x);
+		Location whiteTwo = new Point(y-2,x);
+		Location whiteLeft = new Point(y-1,x-1);
+		Location whiteRight = new Point(y-1,x+1);
+		
+		Location enPassantLeft = new Point(y,x-1);
+		Location enPassantRight = new Point(y,x+1);
+				
+		Location blackOne = new Point(y+1,x);
+		Location blackTwo = new Point(y+2,x);
+		Location blackLeft = new Point(y+1,x-1);
+		Location blackRight = new Point(y+1,x+1);
+
+		return possibleMoves;
 	}
 
 	public int getMoveCount() {
