@@ -26,11 +26,17 @@ public class Piece{
 		location = p;
 	}
 
-	public void move(Point p) {
-		if (grid.get(p) == null) {
-			location = p;
+	public void move(Point k) {
+		if (isMoveLegal(k)) {
+			grid.set(k,this);
 		}
 	}
+
+	public ArrayList<Location> getMoves(BoardState board) {
+		ArrayList<Point> possibleMoves = new ArrayList<Location>();
+		return possibleMoves;
+	}
+
 	public void getGrid(){
 		return grid;
 	}

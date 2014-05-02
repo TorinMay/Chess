@@ -8,30 +8,24 @@ public class Pawn extends Piece{
 		super("Pawn", color, p);
 	}
 
-	public void move(Point k) {
-		if (isMoveLegal(k)) {
-			grid.set(k,this);
-		}
-	}
-
 	public ArrayList<Location> getMoves(BoardState board)
 	{
-		ArrayList<Location> possibleMoves = new ArrayList<Location>();
+		ArrayList<Point> possibleMoves = new ArrayList<Location>();
 		int y = getLoc().getY();
 		int x = getLoc().getX();
 		
-		Location whiteOne = new Point(y-1,x);
-		Location whiteTwo = new Point(y-2,x);
-		Location whiteLeft = new Point(y-1,x-1);
-		Location whiteRight = new Point(y-1,x+1);
+		Point whiteOne = new Point(y-1,x);
+		Point whiteTwo = new Point(y-2,x);
+		Point whiteLeft = new Point(y-1,x-1);
+		Point whiteRight = new Point(y-1,x+1);
 		
-		Location enPassantLeft = new Point(y,x-1);
-		Location enPassantRight = new Point(y,x+1);
+		Point enPassantLeft = new Point(y,x-1);
+		Point enPassantRight = new Point(y,x+1);
 				
-		Location blackOne = new Point(y+1,x);
-		Location blackTwo = new Point(y+2,x);
-		Location blackLeft = new Point(y+1,x-1);
-		Location blackRight = new Point(y+1,x+1);
+		Point blackOne = new Point(y+1,x);
+		Point blackTwo = new Point(y+2,x);
+		Point blackLeft = new Point(y+1,x-1);
+		Point blackRight = new Point(y+1,x+1);
 
 		return possibleMoves;
 	}
