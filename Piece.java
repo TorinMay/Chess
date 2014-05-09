@@ -3,7 +3,7 @@ public class Piece{
 	private String type;
 	private Point location;
 	private String color;
-	private Grid grid = new Grid();
+	protected Grid grid = new Grid();
 
 	public Piece(String a, String color, Point x){
 		type = a;
@@ -27,7 +27,7 @@ public class Piece{
 	}
 
 	public void move(Point p) {
-		if (grid.get(p) == null) {
+		if (grid.getSquare(p) == null) {
 			location = p;
 		}
 	}

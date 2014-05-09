@@ -1,10 +1,11 @@
+import java.awt.*;
 public class Square{
 	private Color c;
 	private Point b;
 	private Graphics g;
 	private Piece z;
-	public Square(String a, Point b, Peice k){
-		if(a.eqauls("Black")){
+	public Square(String a, Point b, Piece k){
+		if(a.equals("Black")){
 			c = new Color(62, 0, 36);
 		}
 		else{
@@ -20,7 +21,7 @@ public class Square{
 	public void set(Piece l){
 		this.z=l;
 	}
-	public Peice get(){
+	public Piece get(){
 		return z;
 	}
 
