@@ -11,10 +11,10 @@ public class Knight extends Piece{
 		int ololol = k.getX();
 
 		if((lololo-j)/2 == ololol-i && lololo < 8 && ololol < 8 && isMoveLegal(k)){
-			getGrid.set(k, this);
+			grid.set(k, this);
 		}
 		else if(lololo-j == (ololol-i)/2 && lololo < 8 && ololol < 8 && isMoveLegal(k)){
-			getGrid.set(k, this);
+			grid.set(k, this);
 		}
 	}
 }

@@ -44,6 +44,7 @@ public class Pawn extends Piece{
 				return true;
 			}
 		}
+		return false;
 	}
 
 	//method for a pawn's starting move, they can move forward two spaces

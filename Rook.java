@@ -14,5 +14,6 @@ public class Rook extends Piece{
 		}else if(k.getX() == getLoc().getX()) {
 			return true;
 		}
+		return false;
 	}
 }

@@ -10,8 +10,8 @@ public class King extends Piece {
 	}
 	public boolean isMoveLegal(Point k) {
 
-		int j;
-		int i;
+		int j = 0;
+		int i = 0;
 		Point superLoc = super.getLoc();
 		int superX = superLoc.getX();
 		int superY = superLoc.getY();
