@@ -21,7 +21,7 @@ public class Board extends JPanel{
 		JFrame frame = new JFrame("Chess");
 		Board board = new Board();
 		frame.add(board);
-		frame.setSize((cellWidth * numCellsX) + 10,(cellHeight * numCellsY) + 40);
+		frame.setSize((cellWidth * numCellsX) + 5,(cellHeight * numCellsY) + 35);
 		frame.setVisible(true);
 
 	}
@@ -59,9 +59,9 @@ public class Board extends JPanel{
 
 	public static void readImgs() {
 		try {
-    		kingImage = ImageIO.read(new File("C:/Users/apcs/projects/Chess/img/king_white.png"));
+    		kingImage = ImageIO.read(new File("/Users/apcs/projects/Chess/img/king_white.png"));
 		} catch (IOException e) {
-			System.out.println("Error reading file" + e.getMessage());
+			System.out.println("Error reading file " + e.getMessage());
 		}
 	}
 }
