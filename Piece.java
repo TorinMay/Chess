@@ -43,7 +43,9 @@ public class Piece{
 	}
 
 	public boolean isMoveLegal(Point k) {
-		return false;
+		if(k.getY() < 9 && k.getX()>0 && k.getY() >0 && k.getX()< 9){
+			return false;
+		}
 	}
 
 }

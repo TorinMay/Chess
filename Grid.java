@@ -19,6 +19,7 @@ public class Grid {
 	public void set(Point g, Piece l){
 		this.getSquare(g).set(l);
 	}
+	
 	public Square getSquare(Point k){
 		return arrayYo[k.getX()][k.getY()];
 	}

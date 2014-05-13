@@ -2,7 +2,7 @@ import  java.lang.Math.*;
 
 public class Knight extends Piece{
 	public Knight(Point k, String color){
-		super("Knight", k);
+		super("Knight",color, k);
 	}
 	public void move(Point k){
 		int j = getLoc().getY();
@@ -10,10 +10,10 @@ public class Knight extends Piece{
 		int lololo = k.getY();
 		int ololol = k.getX();
 
-		if((lololo-j)/2 == ololol-i && lololo < 8 && ololol < 8 && getGrid().get(k) == null){
+		if((lololo-j)/2 == ololol-i && lololo < 8 && ololol < 8 && isMoveLegal(k)){
 			getGrid.set(k, this);
 		}
-		else if(lololo-j == (ololol-i)/2 && lololo < 8 && ololol < 8 && getGrid().get(k) == null){
+		else if(lololo-j == (ololol-i)/2 && lololo < 8 && ololol < 8 && isMoveLegal(k)){
 			getGrid.set(k, this);
 		}
 	}

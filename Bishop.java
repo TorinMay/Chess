@@ -8,7 +8,7 @@ public class Bishop extends Piece {
 	public void move(Point k){
 		int j = getLoc().getY();
 		int i = getLoc().getX();
-		if(Math.abs(k.getY()-j) == Math.abs(k.getX()-i) && k.getY() < 8 && k.getX() < 8 && getGrid().get(k) = null){
+		if(Math.abs(k.getY()-j) == Math.abs(k.getX()-i) && k.getY() < 8 && k.getX() < 8 && isMoveLegal(k)){
 			getGrid().set(k, this);
 		}
 	}
