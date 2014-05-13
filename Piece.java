@@ -25,11 +25,19 @@ public class Piece{
 	public void setLoc(Point p) {
 		location = p;
 	}
-
-	public void move(Point p) {
-		if (grid.getSquare(p) == null) {
-			location = p;
+	public void move(Point k) {
+		if (isMoveLegal(k)) {
+			grid.set(k,this);
 		}
+	}
+
+	public ArrayList<Location> getMoves(Board board) {
+		ArrayList<Location> possibleMoves = new ArrayList<Location>();
+		return possibleMoves;
+	}
+
+	public void getGrid(){
+		return grid;
 	}
 
 }

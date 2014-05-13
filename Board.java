@@ -59,7 +59,7 @@ public class Board extends JPanel{
 
 	public static void readImgs() {
 		try {
-    		kingImage = ImageIO.read(new File("C:\\Users\\Torin\\Documents\\GitHub\\Chess\\img\\king_white.png"));
+    		kingImage = ImageIO.read(new File("C:/Users/apcs/projects/Chess/img/king_white.png"));
 		} catch (IOException e) {
 			System.out.println("Error reading file" + e.getMessage());
 		}

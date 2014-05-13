@@ -5,16 +5,16 @@ public class Queen extends Piece {
 
 	public void move(Point k) {
 		if (isMoveLegal(k)) {
-			grid.set(k,this);
+			getGrid().set(k,this);
 		}
 	}
 	public boolean isMoveLegal(Point k) {
-		int deltaX = super.getX() - k.getX();
-		int deltaY = super.getY() - k.getY();
-		if(k.getY() == super.getY()) {
+		int deltaX = getLoc().getX() - k.getX();
+		int deltaY = getLoc().getY() - k.getY();
+		if(k.getY() == getLoc().getY()) {
 			return true;
 			
-		}else if(k.getX() == super.getX()) {
+		}else if(k.getX() == getLoc().getX()) {
 			return true;
 
 		}else if(deltaX == deltaY) {

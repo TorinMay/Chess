@@ -5,6 +5,6 @@ public class Player {
 	}
 
 	public void enPasse(Pawn pawn){
-		if(pawn.getMoveCount == 1)
+		//if(pawn.getMoveCount == 1)
 	}
 }
