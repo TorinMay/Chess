@@ -1,6 +1,6 @@
 public class Rook extends Piece{
 	
-	public Rook(Point p, Color color) {
+	public Rook(Point p, String color) {
 		super("Rook", color, p);
 	}
 
@@ -8,7 +8,7 @@ public class Rook extends Piece{
 		
 	}
 
-	public boolean isMoveLegal() {
+	public boolean isMoveLegal(Point k) {
 		if(k.getY() == getLoc().getY()) {
 			return true;
 		}else if(k.getX() == getLoc().getX()) {

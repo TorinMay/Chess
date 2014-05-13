@@ -8,9 +8,9 @@ public class Pawn extends Piece{
 		super("Pawn", color, p);
 	}
 
-	public ArrayList<Location> getMoves(BoardState board)
+	public ArrayList<Point> getMoves()
 	{
-		ArrayList<Point> possibleMoves = new ArrayList<Location>();
+		ArrayList<Point> possibleMoves = new ArrayList<Point>();
 		int y = getLoc().getY();
 		int x = getLoc().getX();
 		
@@ -34,12 +34,12 @@ public class Pawn extends Piece{
 		return moveCount;
 	}
 
-	public boolean isMoveLegal(){
-		if (color == "white") {
+	public boolean isMoveLegal(Point k){
+		if (getColor() == "white") {
 			if (k.getX() == getLoc().getX() && k.getY() == getLoc().getY() - 1 && k.getY() > 0) {
 				return true;
 			}
-		} else if (color == "black") {
+		} else if (getColor() == "black") {
 			if (k.getX() == getLoc().getX() && k.getY() == getLoc().getY() + 1 && k.getY() > 0) {
 				return true;
 			}
@@ -48,11 +48,11 @@ public class Pawn extends Piece{
 
 	//method for a pawn's starting move, they can move forward two spaces
 	public void openingMove(Point k) {
-		if (color == "white") {
+		if (getColor() == "white") {
 			if (k.getX() == getLoc().getX() && k.getY() == getLoc().getY() - 2 && k.getY() > 0) {
 				grid.set(k, this);
 			}
-		} else if (color == "black") {
+		} else if (getColor() == "black") {
 			if (k.getX() == getLoc().getX() && k.getY() == getLoc().getY() + 2 && k.getY() > 0) {
 				grid.set(k, this);
 			}
@@ -68,12 +68,12 @@ public class Pawn extends Piece{
 	//checks if the pawn has reached the end of the board (where it can choose to promote)
 	public boolean checkPromote(Pawn pawn) {
 		if (getColor().equals("white")) {
-			if(getLoc(getX()) == 0) {
+			if(getLoc().getX() == 0) {
 				return true;
 			}
 		}
 		if (getColor().equals("black")) {
-			if(getLoc(getY()) == 7) {
+			if(getLoc().getY() == 7) {
 				return true;
 			}
 		}

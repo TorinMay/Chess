@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Piece{
 
 	private String type;
@@ -31,13 +33,17 @@ public class Piece{
 		}
 	}
 
-	public ArrayList<Location> getMoves(Board board) {
-		ArrayList<Location> possibleMoves = new ArrayList<Location>();
+	public ArrayList<Point> getMoves(Point k) {
+		ArrayList<Point> possibleMoves = new ArrayList<Point>();
 		return possibleMoves;
 	}
 
-	public void getGrid(){
+	public Grid getGrid(){
 		return grid;
+	}
+
+	public boolean isMoveLegal(Point k) {
+		return false;
 	}
 
 }
