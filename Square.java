@@ -6,7 +6,7 @@ public class Square{
 	private Piece z;
 	public Square(String a, Point b, Piece k){
 		if(a.equals("Black")){
-			c = new Color(62, 0, 36);
+			c = new Color(92,64,51);
 		}
 		else{
 			c = new Color(255,190,228);

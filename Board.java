@@ -28,26 +28,27 @@ public class Board extends JPanel{
 	
 
 	public void paint(Graphics g) {
+		String a = "";
 		Color b = new Color(94,38,18);
 		Color c = new Color(94,38,18);
 		for (int i=0; i < numCellsX; i++) {
 			boolean isEven = ((i%2) == 0);
 			if(isEven) {
-				c = new Color(255,250,205);
+				a = "White";
 			}else {
-				c = new Color(94,38,18);
+				a = "Black";
 			}
 			for (int j=0; j < numCellsY; j++) {
 				int x = i * cellWidth;
 				int y = j * cellHeight;
-				if (c == b) {
-					c = new Color(255,250,205);
+				if (a.equals("Black")) {
+					a = "White";
 				}else {
-					c = new Color(94,38,18);
+					a = "Black";
 				}
-				g.setColor(c);
-				g.fillRect(x,y,cellWidth,cellHeight);
 				Point z = new Point(i,j);
+				Square square = new Square(a,z,null);
+				square.paint(i,j,g);				
 				Piece piece = grid.getSquare(z).get();
 				if (piece != null) {
 					g.drawImage(kingImage, x, y, cellWidth, cellHeight, null);
