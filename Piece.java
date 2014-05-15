@@ -1,5 +1,6 @@
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 
 import java.util.ArrayList;
 
@@ -12,7 +13,7 @@ public class Piece{
 
 	private String type;
 	private Point location;
-	private String color;
+	private String col;
 	private Image image;
 
 	protected Grid grid = new Grid();
@@ -20,15 +21,16 @@ public class Piece{
 	public Piece(String a, String color, Point x){
 		type = a;
 		location = x;
+		this.col = color;
 		this.image = Piece.loadImage(a);
 	}
 
-	private static Image loadImage(String name) {
+	private static Image loadImage(String name, String color) {
 		String path = null;
 		Image image = null;
 
 		try {
-			path = "img" + File.separator + name + ".png";
+			path = "img" + File.separator + name + "_" + color + ".png";
 			//path = "images/asdfsad.jpg";
 			image = ImageIO.read(new File(path));
 		} catch(IOException e) {
@@ -49,16 +51,25 @@ public class Piece{
 	}
 
 	public String getColor() {
-		return color;
+		return col;
 	}
 
 	public void setLoc(Point p) {
 		location = p;
 	}
+
+	public Image getImage() {
+		return image;
+	}
+
 	public void move(Point k) {
 		if (isMoveLegal(k)) {
 			grid.set(k,this);
 		}
+	}
+
+	public void draw(Graphics g, Rectangle r) {
+		g.drawImage(image, r.x, r.y, r.width, r.height, null);
 	}
 
 	public ArrayList<Point> getMoves(Point k) {
