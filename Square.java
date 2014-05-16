@@ -16,7 +16,7 @@ public class Square{
 	}
 	public void paint(int x, int y, Graphics g){
 		g.setColor(this.c);
-		g.fillRect(x*50+50,y*50+50,50,50);
+		g.fillRect(x*120,y*120,120,120);
 	}
 	public void set(Piece l){
 		this.z=l;

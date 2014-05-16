@@ -22,7 +22,7 @@ public class Piece{
 		type = a;
 		location = x;
 		this.col = color;
-		this.image = Piece.loadImage(a);
+		this.image = Piece.loadImage(a, color);
 	}
 
 	private static Image loadImage(String name, String color) {
