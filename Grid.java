@@ -32,8 +32,8 @@ public class Grid extends JPanel{
 		grid.set(p,king);
 		readImgs();
 		JFrame frame = new JFrame("Chess");
-		Board board = new Board();
-		frame.add(board);
+		Grid grid = new Grid();
+		frame.add(grid);
 		frame.setSize((cellWidth * numCellsX) + 5,(cellHeight * numCellsY) + 35);
 		frame.setVisible(true);
 

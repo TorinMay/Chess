@@ -1,9 +1,9 @@
-import java.util.Graphics;
+import java.awt.Graphics;
 
 public class GameRunner {
-	private Graphics g = new Graphics();
-	private Board board = new Board();
+	public static Graphics g = new Graphics();
+	private static Grid grid= new Grid();
 	public static void main(String[] args) {
-		board.paint(g);
+		grid.paint(g);
 	}
 }
