@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 public class Square extends JButton{
 	private Color c;
 	private Point b;
