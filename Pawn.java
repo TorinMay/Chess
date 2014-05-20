@@ -51,11 +51,11 @@ public class Pawn extends Piece{
 	public void openingMove(Point k) {
 		if (getColor() == "white") {
 			if (k.getX() == getLoc().getX() && k.getY() == getLoc().getY() - 2 && k.getY() > 0) {
-				grid.set(k, this);
+				getGrid().getSquare(k).set(this);
 			}
 		} else if (getColor() == "black") {
 			if (k.getX() == getLoc().getX() && k.getY() == getLoc().getY() + 2 && k.getY() > 0) {
-				grid.set(k, this);
+				getGrid().getSquare(k).set(this);
 			}
 		}
 		moveCount++;

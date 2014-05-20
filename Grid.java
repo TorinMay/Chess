@@ -6,11 +6,8 @@ import java.io.*;
 import javax.imageio.*;
 
 public class Grid extends JPanel{
-	public static final int cellWidth = 120;
-	public static final int cellHeight = 120;
-	public static final int numCellsX = 8;
-	public static final int numCellsY = 8;
-	public static Grid grid = new Grid();
+
+	public static Grid grid;
 	static BufferedImage kingImage = null;
 	private Square[][] arrayYo = new Square[8][8];
 	private Point l;
@@ -23,7 +20,8 @@ public class Grid extends JPanel{
 	private Graphics graph;
 
 
-	public Grid(){
+	public Grid(Grid grid){
+		this.grid = grid;
 		for (int a = 0;a<8; a++) {
 			for (int b = 0; b<8; b++) {
 				if(a%2 == 0){
@@ -50,16 +48,7 @@ public class Grid extends JPanel{
 	}	
 
 	public static void main(String[] args) {
-		Point p = new Point(numCellsX/2,0);
-		King king = new King(p,"White",this);
-		grid.set(p,king);
-		readImgs();
-		JFrame frame = new JFrame("Chess");
-		Grid grid = new Grid();
-		frame.add(grid);
-		frame.setSize((cellWidth * numCellsX) + 5,(cellHeight * numCellsY) + 35);
-		frame.setVisible(true);
-
+	
 	}
 	public void set(Point g, Piece l){
 		this.getSquare(g).set(l);

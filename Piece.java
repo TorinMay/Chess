@@ -22,7 +22,7 @@ public class Piece{
 		type = a;
 		location = x;
 		this.col = color;
-		this.image = Piece.loadImage(a, color);
+		this.image = this.loadImage(a, color);
 	}
 
 	private static Image loadImage(String name, String color) {
@@ -64,7 +64,7 @@ public class Piece{
 
 	public void move(Point k) {
 		if (isMoveLegal(k)) {
-			grid.set(k,this);
+			getGrid().set(k,this);
 		}
 	}
 	public Grid getGrid(){
