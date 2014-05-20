@@ -15,8 +15,10 @@ public class Piece{
 	private Point location;
 	private String col;
 	private Image image;
+	private Grid g;
 
-	public Piece(String a, String color, Point x){
+	public Piece(String a, String color, Point x, Grid grid){
+		g = grid;
 		type = a;
 		location = x;
 		this.col = color;
@@ -65,6 +67,9 @@ public class Piece{
 			grid.set(k,this);
 		}
 	}
+	public Grid getGrid(){
+		return g;
+	}
 
 	public void draw(Graphics g) {
 		g.drawImage(image, location.getX(), location.getY(), 120, 120, null);
@@ -74,11 +79,6 @@ public class Piece{
 		ArrayList<Point> possibleMoves = new ArrayList<Point>();
 		return possibleMoves;
 	}
-
-	public Grid getGrid(){
-		return grid;
-	}
-
 	public boolean isMoveLegal(Point k) {
 		if(k.getY() > 9 && k.getX()<0 && k.getY() <0 && k.getX()> 9){
 			return true;

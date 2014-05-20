@@ -2,8 +2,8 @@ import  java.lang.Math.*;
 public class Bishop extends Piece {
 	private int x = 0;
 	private int y = 0;
-	public Bishop(Point k, String color){
-		super("Bishop", color, k);
+	public Bishop(Point k, String color,Grid grid){
+		super("Bishop", color, k, grid);
 	}
 	public void move(Point k){
 		int j = getLoc().getY();

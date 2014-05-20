@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Rook extends Piece{
 	
-	public Rook(Point p, String color) {
-		super("Rook", color, p);
+	public Rook(Point p, String color,Grid grid) {
+		super("Rook", color, p, grid);
 	}
 
 	public ArrayList<Point> getMoves()

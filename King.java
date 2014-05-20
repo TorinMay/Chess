@@ -1,6 +1,6 @@
 public class King extends Piece {
-	public King(Point k, String color) {
-		super("King", color, k);
+	public King(Point k, String color,Grid grid) {
+		super("King", color, k, grid);
 	}
 
 	public void move(Point k) {

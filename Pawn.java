@@ -4,8 +4,8 @@ public class Pawn extends Piece{
 
 	private int moveCount = 0;
 
-	public Pawn(Point p, String color) {
-		super("Pawn", color, p);
+	public Pawn(Point p, String color,Grid grid) {
+		super("Pawn", color, p, grid);
 	}
 
 	public ArrayList<Point> getMoves()

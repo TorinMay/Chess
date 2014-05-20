@@ -24,7 +24,6 @@ public class Grid extends JPanel{
 
 
 	public Grid(){
-		System.out.println("DONT YOU BE LOOPIN");
 		for (int a = 0;a<8; a++) {
 			for (int b = 0; b<8; b++) {
 				if(a%2 == 0){
@@ -35,30 +34,24 @@ public class Grid extends JPanel{
 				}
 			}
 		}
-
-		System.out.println("printing pieces");
 		for(int i=0;i<8;i++){
 			for(int z = 0;z<8;z++){
 				if(i==1){
-					pawn = new Pawn(new Point(i,z),"black");
+					pawn = new Pawn(new Point(i,z),"black",this);
 					arrayYo[i][z].set(pawn);
 					arrayYo[i][z].paint(graph);
 				}else if(i==6){
-					pawn = new Pawn(new Point(i,z),"black");
+					pawn = new Pawn(new Point(i,z),"black",this);
 					arrayYo[i][z].set(pawn);
 					arrayYo[i][z].paint(graph);
 				}
-				System.out.println("I DO WORK SHUTUP");
 			}
-			System.out.println("Inner for loop not working");
 		}
-		System.out.println("End of 2nd forloop");
-
 	}	
 
 	public static void main(String[] args) {
 		Point p = new Point(numCellsX/2,0);
-		King king = new King(p,"White");
+		King king = new King(p,"White",this);
 		grid.set(p,king);
 		readImgs();
 		JFrame frame = new JFrame("Chess");

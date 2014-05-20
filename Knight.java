@@ -1,8 +1,8 @@
 import  java.lang.Math.*;
 
 public class Knight extends Piece{
-	public Knight(Point k, String color){
-		super("Knight",color, k);
+	public Knight(Point k, String color,Grid grid){
+		super("Knight",color, k, grid);
 	}
 	public void move(Point k){
 		int j = getLoc().getY();

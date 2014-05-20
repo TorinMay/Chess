@@ -1,6 +1,6 @@
 public class Queen extends Piece {
-	public Queen(Point k, String color) {
-		super("Queen", color, k);
+	public Queen(Point k, String color,Grid grid) {
+		super("Queen", color, k, grid);
 	}
 
 	public void move(Point k) {
