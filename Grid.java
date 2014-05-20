@@ -14,6 +14,13 @@ public class Grid extends JPanel{
 	static BufferedImage kingImage = null;
 	private Square[][] arrayYo = new Square[8][8];
 	private Point l;
+	private King king;
+	private Queen queen;
+	private Pawn pawn;
+	private Bishop bishop;
+	private Knight knight;
+	private Rook rook;
+	private Graphics graph;
 	public Grid(){
 		for (int a = 0;a<8; a++) {
 			for (int b = 0; b<8; b++) {
@@ -25,6 +32,20 @@ public class Grid extends JPanel{
 				}
 			}
 		}
+		for(int i=0;i<8;i++){
+			for(int z = 0;z<8;z++){
+				if(i==1){
+					pawn = new Pawn(new Point(i,z),"black");
+					arrayYo[i][z].set(pawn);
+					arrayYo[i][z].get().paint(graph);
+				}else if(i==6){
+					pawn = new Pawn(new Point(i,z),"black");
+					arrayYo[i][z].set(pawn);
+					arrayYo[i][z].get().paint(graph);
+				}
+			}
+		}
+
 	}	
 	public static void main(String[] args) {
 		Point p = new Point(numCellsX/2,0);
@@ -46,6 +67,7 @@ public class Grid extends JPanel{
 		return arrayYo[k.getX()][k.getY()];
 	}
 	public void paint(Graphics g) {
+		graph = g;
 		String a = "";
 		for (int i=0; i < numCellsX; i++) {
 			boolean isEven = ((i%2) == 0);
