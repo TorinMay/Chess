@@ -24,6 +24,7 @@ public class Grid extends JPanel{
 
 
 	public Grid(){
+		System.out.println("DONT YOU BE LOOPIN");
 		for (int a = 0;a<8; a++) {
 			for (int b = 0; b<8; b++) {
 				if(a%2 == 0){
@@ -47,8 +48,11 @@ public class Grid extends JPanel{
 					arrayYo[i][z].set(pawn);
 					arrayYo[i][z].paint(graph);
 				}
+				System.out.println("I DO WORK SHUTUP");
 			}
+			System.out.println("Inner for loop not working");
 		}
+		System.out.println("End of 2nd forloop");
 
 	}	
 

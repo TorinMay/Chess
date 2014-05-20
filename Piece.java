@@ -16,8 +16,6 @@ public class Piece{
 	private String col;
 	private Image image;
 
-	protected Grid grid = new Grid();
-
 	public Piece(String a, String color, Point x){
 		type = a;
 		location = x;
