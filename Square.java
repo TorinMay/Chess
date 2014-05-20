@@ -1,11 +1,13 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.awt.Graphics;
+
 public class Square extends JButton{
 	private Color c;
 	private Point b;
-	private Graphics g;
 	private Piece z;
+	
 	public Square(String a, Point b, Piece k){
 		if(a.equals("Black")){
 			c = new Color(54,29,0);
@@ -20,9 +22,11 @@ public class Square extends JButton{
 		g.setColor(this.c);
 		g.fillRect(x*120,y*120,120,120);
 	}
+
 	public void set(Piece l){
 		this.z=l;
 	}
+
 	public Piece get(){
 		return z;
 	}
