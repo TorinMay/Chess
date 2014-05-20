@@ -68,8 +68,8 @@ public class Piece{
 		}
 	}
 
-	public void draw(Graphics g, Rectangle r) {
-		g.drawImage(image, r.x, r.y, r.width, r.height, null);
+	public void draw(Graphics g) {
+		g.drawImage(image, location.getX(), location.getY(), 120, 120, null);
 	}
 
 	public ArrayList<Point> getMoves(Point k) {

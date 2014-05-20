@@ -7,7 +7,7 @@ public class Square extends JButton{
 	private Color c;
 	private Point b;
 	private Piece z;
-	
+
 	public Square(String a, Point b, Piece k){
 		if(a.equals("Black")){
 			c = new Color(54,29,0);
@@ -16,7 +16,7 @@ public class Square extends JButton{
 			c = new Color(255,240,195);
 		}
 		this.b = b;
-		z=k;
+		z = k;
 	}
 	public void paint(int x, int y, Graphics g){
 		g.setColor(this.c);

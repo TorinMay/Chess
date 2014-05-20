@@ -21,6 +21,8 @@ public class Grid extends JPanel{
 	private Knight knight;
 	private Rook rook;
 	private Graphics graph;
+
+
 	public Grid(){
 		for (int a = 0;a<8; a++) {
 			for (int b = 0; b<8; b++) {
@@ -32,21 +34,24 @@ public class Grid extends JPanel{
 				}
 			}
 		}
+
+		System.out.println("printing pieces");
 		for(int i=0;i<8;i++){
 			for(int z = 0;z<8;z++){
 				if(i==1){
 					pawn = new Pawn(new Point(i,z),"black");
 					arrayYo[i][z].set(pawn);
-					arrayYo[i][z].get().paint(graph);
+					arrayYo[i][z].paint(graph);
 				}else if(i==6){
 					pawn = new Pawn(new Point(i,z),"black");
 					arrayYo[i][z].set(pawn);
-					arrayYo[i][z].get().paint(graph);
+					arrayYo[i][z].paint(graph);
 				}
 			}
 		}
 
 	}	
+
 	public static void main(String[] args) {
 		Point p = new Point(numCellsX/2,0);
 		King king = new King(p,"White");
